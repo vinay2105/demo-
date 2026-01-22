@@ -1,0 +1,488 @@
+{% extends 'core/base.html' %}
+{% load static %}
+
+{% block title %}Contact Elite Gym - Get Started Today{% endblock %}
+
+{% block content %}
+<!-- Contact Hero -->
+<section class="contact-hero">
+    <div class="container">
+        <div class="hero-content text-center">
+            <h1 class="hero-title gradient-text">Get In Touch</h1>
+            <p class="hero-subtitle">
+                Ready to transform? Contact our team for membership, training programs, or facility tour.
+            </p>
+        </div>
+    </div>
+</section>
+
+<!-- Contact Info & Form -->
+<section class="contact-main" id="contact">
+    <div class="container">
+        <div class="contact-grid">
+            <!-- Contact Info -->
+            <div class="contact-info animate-slide-right">
+                <h2 class="section-title">Contact Information</h2>
+                
+                <div class="contact-item">
+                    <div class="contact-icon">📞</div>
+                    <div class="contact-details">
+                        <h4>Phone</h4>
+                        <a href="tel:+919876543210" class="contact-link">+91 98765 43210</a>
+                    </div>
+                </div>
+
+                <div class="contact-item">
+                    <div class="contact-icon">✉️</div>
+                    <div class="contact-details">
+                        <h4>Email</h4>
+                        <a href="mailto:elitegym@gmail.com" class="contact-link">elitegym@gmail.com</a>
+                    </div>
+                </div>
+
+                <div class="contact-item">
+                    <div class="contact-icon">📍</div>
+                    <div class="contact-details">
+                        <h4>Address</h4>
+                        <p>Sector 62, Near Sahibabad Metro Station<br>Ghaziabad, UP 201010</p>
+                    </div>
+                </div>
+
+                <div class="contact-item">
+                    <div class="contact-icon">⏰</div>
+                    <div class="contact-details">
+                        <h4>Hours</h4>
+                        <p>Monday - Sunday<br>5:00 AM - 11:00 PM</p>
+                    </div>
+                </div>
+
+                <div class="quick-actions mt-xl">
+                    <a href="tel:+919876543210" class="btn btn-primary btn-lg">Call Now</a>
+                    <a href="https://wa.me/919876543210" class="btn btn-outline btn-lg">WhatsApp</a>
+                </div>
+            </div>
+
+            <!-- Contact Form -->
+            <div class="contact-form animate-slide-left">
+                <h2 class="section-title">Send Message</h2>
+                <p class="form-subtitle">Get personalized membership options or schedule a free consultation</p>
+                
+                <form class="contact-form-inner" id="contactForm">
+                    <div class="form-group">
+                        <input type="text" id="name" name="name" placeholder="Your Name" required>
+                        <label for="name">Full Name</label>
+                    </div>
+
+                    <div class="form-group">
+                        <input type="tel" id="phone" name="phone" placeholder="Your Phone" required>
+                        <label for="phone">Phone Number</label>
+                    </div>
+
+                    <div class="form-group full-width">
+                        <textarea id="message" name="message" rows="5" placeholder="Your Message" required></textarea>
+                        <label for="message">Message</label>
+                    </div>
+
+                    <button type="submit" class="btn btn-primary btn-lg btn-submit">
+                        Send Message
+                        <span class="submit-loader"></span>
+                    </button>
+                </form>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Map Section -->
+<section class="map-section">
+    <div class="container">
+        <h2 class="section-title text-center mb-xl">Find Us</h2>
+        <div class="map-container">
+            <iframe 
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3504.123456789!2d77.366!3d28.669!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMjjCsDQwJzA5LjIiTiA3N8KwMjInMDAuMSJF!5e0!3m2!1sen!2sin!4v1634567890123" 
+                width="100%" 
+                height="400" 
+                style="border:0; border-radius: 20px;" 
+                allowfullscreen="" 
+                loading="lazy">
+            </iframe>
+        </div>
+    </div>
+</section>
+
+<!-- Final CTA -->
+<section class="final-cta">
+    <div class="container">
+        <div class="cta-content text-center">
+            <h2 class="cta-title">Start Your Transformation</h2>
+            <p class="cta-subtitle">Limited membership spots available. Join Ghaziabad's elite fitness facility.</p>
+            <div class="cta-buttons">
+                <a href="tel:+919876543210" class="btn btn-primary btn-xl">Call Now (30s)</a>
+                <a href="https://wa.me/919876543210" class="btn btn-outline btn-xl">WhatsApp Chat</a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<style>
+    /* Contact Hero */
+    .contact-hero {
+        padding: 8rem 0 6rem;
+        background: linear-gradient(135deg, #0a0a0a 0%, #1a0a0a 100%);
+        text-align: center;
+        position: relative;
+        overflow: hidden;
+    }
+
+    .contact-hero::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: radial-gradient(circle at 20% 80%, rgba(255,71,87,0.1) 0%, transparent 50%),
+                    radial-gradient(circle at 80% 20%, rgba(255,107,122,0.1) 0%, transparent 50%);
+    }
+
+    /* Main Contact Section */
+    .contact-main {
+        padding: 6rem 0;
+        background: #0f0f0f;
+    }
+
+    .contact-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 4rem;
+        align-items: start;
+    }
+
+    /* Contact Info */
+    .contact-info {
+        background: rgba(20, 20, 20, 0.8);
+        padding: 3rem;
+        border-radius: 25px;
+        border: 1px solid rgba(255,255,255,0.1);
+        backdrop-filter: blur(10px);
+        height: fit-content;
+    }
+
+    .contact-item {
+        display: flex;
+        gap: 1.5rem;
+        margin-bottom: 2.5rem;
+        padding-bottom: 2rem;
+        border-bottom: 1px solid rgba(255,255,255,0.05);
+    }
+
+    .contact-item:last-child {
+        border-bottom: none;
+        margin-bottom: 0;
+    }
+
+    .contact-icon {
+        width: 60px;
+        height: 60px;
+        background: linear-gradient(135deg, #ff4757, #ff6b7a);
+        border-radius: 15px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 1.5rem;
+        flex-shrink: 0;
+    }
+
+    .contact-details h4 {
+        font-size: 1.1rem;
+        margin-bottom: 0.5rem;
+        color: #fff;
+        font-weight: 600;
+    }
+
+    .contact-link {
+        color: #ff4757;
+        font-size: 1.2rem;
+        font-weight: 600;
+        text-decoration: none;
+        transition: all 0.3s ease;
+        display: block;
+    }
+
+    .contact-link:hover {
+        color: #fff;
+        text-shadow: 0 0 15px rgba(255,71,87,0.6);
+    }
+
+    .contact-details p {
+        color: #b0b0b0;
+        line-height: 1.6;
+    }
+
+    .quick-actions {
+        display: flex;
+        gap: 1rem;
+        margin-top: 2rem;
+    }
+
+    /* Contact Form */
+    .contact-form {
+        background: rgba(20, 20, 20, 0.8);
+        padding: 3rem;
+        border-radius: 25px;
+        border: 1px solid rgba(255,255,255,0.1);
+        backdrop-filter: blur(10px);
+    }
+
+    .form-subtitle {
+        color: #a0a0a0;
+        margin-bottom: 2.5rem;
+        font-size: 1.1rem;
+    }
+
+    .form-group {
+        position: relative;
+        margin-bottom: 2rem;
+    }
+
+    .form-group.full-width {
+        margin-bottom: 2.5rem;
+    }
+
+    .form-group input,
+    .form-group textarea {
+        width: 100%;
+        padding: 1.2rem 1rem 1rem;
+        background: rgba(15, 15, 15, 0.8);
+        border: 2px solid rgba(255,71,87,0.2);
+        border-radius: 12px;
+        color: #fff;
+        font-size: 1rem;
+        font-family: inherit;
+        transition: all 0.3s ease;
+        resize: vertical;
+    }
+
+    .form-group input::placeholder,
+    .form-group textarea::placeholder {
+        color: #666;
+    }
+
+    .form-group label {
+        position: absolute;
+        top: 1.2rem;
+        left: 1rem;
+        color: #a0a0a0;
+        font-size: 1rem;
+        pointer-events: none;
+        transition: all 0.3s ease;
+        font-weight: 500;
+    }
+
+    .form-group:focus-within label,
+    .form-group input:focus + label,
+    .form-group textarea:focus + label {
+        top: 0.5rem;
+        left: 0.8rem;
+        font-size: 0.85rem;
+        color: #ff4757;
+    }
+
+    .form-group input:focus,
+    .form-group textarea:focus {
+        outline: none;
+        border-color: #ff4757;
+        box-shadow: 0 0 0 4px rgba(255,71,87,0.1);
+        background: rgba(15, 15, 15, 0.95);
+    }
+
+    /* Submit Button */
+    .btn-submit {
+        position: relative;
+        overflow: hidden;
+        width: 100%;
+    }
+
+    .btn-submit:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 15px 40px rgba(255,71,87,0.4);
+    }
+
+    .submit-loader {
+        display: none;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 20px;
+        height: 20px;
+        border: 2px solid transparent;
+        border-top: 2px solid #fff;
+        border-radius: 50%;
+        animation: spin 1s linear infinite;
+    }
+
+    @keyframes spin {
+        0% { transform: translate(-50%, -50%) rotate(0deg); }
+        100% { transform: translate(-50%, -50%) rotate(360deg); }
+    }
+
+    /* Map Section */
+    .map-section {
+        padding: 6rem 0;
+        background: linear-gradient(135deg, #1a1a1a 0%, #111 100%);
+    }
+
+    .map-container {
+        border-radius: 25px;
+        overflow: hidden;
+        box-shadow: 0 40px 100px rgba(0,0,0,0.7);
+        backdrop-filter: blur(10px);
+    }
+
+    /* Final CTA */
+    .final-cta {
+        padding: 6rem 0;
+        background: linear-gradient(135deg, #0a0a0a 0%, #1a0a0a 100%);
+    }
+
+    .mb-xl { margin-bottom: 3rem; }
+
+    /* Animations */
+    .animate-slide-left,
+    .animate-slide-right {
+        opacity: 0;
+        transform: translateX(50px);
+        transition: all 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    }
+
+    .animate-slide-left.animate,
+    .animate-slide-right.animate {
+        opacity: 1;
+        transform: translateX(0);
+    }
+
+    .animate-hero {
+        animation: heroSlide 1s ease-out;
+    }
+
+    @keyframes heroSlide {
+        from { opacity: 0; transform: translateY(30px); }
+        to { opacity: 1; transform: translateY(0); }
+    }
+
+    /* Responsive */
+    @media (max-width: 768px) {
+        .contact-grid {
+            grid-template-columns: 1fr;
+            gap: 3rem;
+        }
+
+        .quick-actions {
+            flex-direction: column;
+        }
+
+        .quick-actions .btn {
+            width: 100%;
+        }
+
+        .container {
+            padding: 0 1.5rem;
+        }
+
+        .contact-info,
+        .contact-form {
+            padding: 2.5rem 2rem;
+        }
+    }
+
+    .text-center { text-align: center; }
+</style>
+
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+    // Form handling (frontend only)
+    const form = document.getElementById('contactForm');
+    const submitBtn = document.querySelector('.btn-submit');
+    const loader = document.querySelector('.submit-loader');
+
+    form.addEventListener('submit', function(e) {
+        e.preventDefault();
+        
+        // Show loading state
+        submitBtn.disabled = true;
+        submitBtn.innerHTML = 'Sending...';
+        loader.style.display = 'block';
+        
+        // Simulate API call
+        setTimeout(() => {
+            // Reset form
+            form.reset();
+            submitBtn.disabled = false;
+            submitBtn.innerHTML = 'Message Sent! ✓';
+            loader.style.display = 'none';
+            
+            // Reset button after 3 seconds
+            setTimeout(() => {
+                submitBtn.innerHTML = 'Send Message';
+            }, 3000);
+        }, 2000);
+    });
+
+    // Input focus animations
+    document.querySelectorAll('.form-group input, .form-group textarea').forEach(input => {
+        input.addEventListener('focus', function() {
+            this.parentElement.classList.add('focused');
+        });
+        
+        input.addEventListener('blur', function() {
+            if (!this.value) {
+                this.parentElement.classList.remove('focused');
+            }
+        });
+    });
+
+    // Intersection Observer for animations
+    const observerOptions = {
+        threshold: 0.1,
+        rootMargin: '0px 0px -100px 0px'
+    };
+
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('animate');
+            }
+        });
+    }, observerOptions);
+
+    // Observe animated elements
+    document.querySelectorAll('.animate-slide-left, .animate-slide-right, .animate-hero').forEach(el => {
+        observer.observe(el);
+    });
+
+    // Active nav link
+    const currentPath = window.location.pathname;
+    document.querySelectorAll('.nav-link').forEach(link => {
+        if (link.getAttribute('href') === currentPath) {
+            link.style.color = '#ff4757';
+            link.style.textShadow = '0 0 20px rgba(255,71,87,0.6)';
+        }
+    });
+
+    // Smooth scroll
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function(e) {
+            e.preventDefault();
+            const target = document.querySelector(this.getAttribute('href'));
+            if (target) {
+                target.scrollIntoView({
+                    behavior: 'smooth',
+                    block: 'start'
+                });
+            }
+        });
+    });
+});
+</script>
+{% endblock %}
